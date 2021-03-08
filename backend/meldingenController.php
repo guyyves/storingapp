@@ -17,4 +17,9 @@ $query = "INSERT INTO meldingen (attractie, capaciteit, melder) VALUES(:attracti
 $statement = $conn->prepare($query);
 
 //4. Execute
-$statement->execute([ ":attractie" => $attractie, ":capaciteit" => $capaciteit, ":melder" => $melder,]);
+$statement->execute([ 
+    ":attractie" => $attractie,
+    ":capaciteit" => $capaciteit, 
+    ":melder" => $melder,
+    ]);
+    header("Location: ../meldingen/index.php?msg=Melding opgeslagen");
