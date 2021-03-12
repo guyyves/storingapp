@@ -2,8 +2,18 @@
 
 //Variabelen vullen
 $attractie = $_POST['attractie'];
+$type = $_POST['type'];
 $capaciteit = $_POST['capaciteit']; 
 $melder = $_POST['melder'];
+$group = $_POST['group'];
+if(isset($_POST['newsletter']))
+{
+    $newsletter = true;
+}
+else
+{
+    $newsletter = false;
+}
 
 header("Location: ../meldingen/index.php?msg=Melding opgeslagen");
 
