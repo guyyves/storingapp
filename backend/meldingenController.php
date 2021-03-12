@@ -5,7 +5,7 @@ $attractie = $_POST['attractie'];
 $capaciteit = $_POST['capaciteit']; 
 $melder = $_POST['melder'];
 
-echo $attractie . " / " . $capaciteit . " / " . $melder;
+header("Location: ../meldingen/index.php?msg=Melding opgeslagen");
 
 //1. Verbinding
 require_once 'conn.php';
