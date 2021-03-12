@@ -25,11 +25,11 @@
                 <option value=" ">- Kies een type -</option>
                 <option value="achtbaan">Achtbaan</option>
                 <option value="draaiend">Draaiende attracties</option>
-                <option value="kinder">kinder acttraties</option>
+                <option value="kinder">kinder attraties</option>
                 <option value="horeca">Horeca</option>
                 <option value="show">Shows</option>
-                <option value="water">Water acttracties</option>
-                <option value="overig">Overige acttracties</option>
+                <option value="water">Water attracties</option>
+                <option value="overig">Overige attracties</option>
                 </select>
             </div>
             <div class="form-group">
@@ -37,7 +37,9 @@
                 <input type="number" min="0" name="capaciteit" id="capaciteit" class="form-input">
             </div>
             <div class="form-group">
-                <label for="prioriteit"></label>
+                <label for="prioriteit">Prio</label>
+                <input type="checkbox" name="prioriteit" id="prioriteit">
+                <label for="prioriteit">Melding met prioriteit</label>
             </div>
             <div class="form-group">
                 <label for="melder">Naam melder:</label>
@@ -56,6 +58,9 @@
                 <label for="newsletter">Nieuwsbrief:</label>
                 <input type="checkbox" name="newsletter" id="newsletter">
                 <label for="newsletter">Ik wil graag de Nieuwsbrief ontvangen</label>
+            </div>
+            <div class="form-group">
+            <textarea name="overig" id="overig" class="form-input" rows="4"></textarea>
             </div>
 
             <input type="submit" value="Verstuur melding">

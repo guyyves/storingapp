@@ -2,9 +2,33 @@
 
 //Variabelen vullen
 $attractie = $_POST['attractie'];
+    if(empty($attractie))
+    {
+        $errors[] = "Vul de attractie-naam in";
+    }
 $type = $_POST['type'];
-$capaciteit = $_POST['capaciteit']; 
+if(empty($type))
+{
+    $errors[] = "Vul een type attractie in";
+}
+$capaciteit = $_POST['capaciteit'];
+    if(!is_numeric($capaciteit)) 
+    { 
+        $errors[] = "Vul voor capaciteit een geldig getal in.";
+    }
+if(isset($_POST['prioriteit']))
+{
+    $prioriteit = true;
+}
+else
+{
+    $prioriteit = false;
+}
 $melder = $_POST['melder'];
+if(empty($melder))
+    {
+        $errors[] = "Vul je naam in";
+    }
 $group = $_POST['group'];
 if(isset($_POST['newsletter']))
 {
@@ -13,6 +37,13 @@ if(isset($_POST['newsletter']))
 else
 {
     $newsletter = false;
+}
+$overig = $_POST['overig'];
+
+if(isset($errors))
+{
+    var_dump($errors);
+    die();
 }
 
 header("Location: ../meldingen/index.php?msg=Melding opgeslagen");
